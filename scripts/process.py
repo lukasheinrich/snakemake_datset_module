@@ -14,7 +14,7 @@ def main():
 
 
        with open(output_file,'w') as outf:
-           outf.write('\n'.join(values))
+           outf.write('\n'.join(values) + '\n')
 
 
 
