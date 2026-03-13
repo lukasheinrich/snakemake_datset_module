@@ -1,0 +1,8 @@
+rule a:
+  input:
+    "{sample_name}/file{index}.txt",
+    "{sample_name}/meta.json"
+  output:
+    "{sample_name}_scaled/output_{index}.txt"
+  shell:
+    "python scripts/process.py signal/file{index}.txt {sample_name}/meta.json {sample_name}_scaled/output_{index}.txt"
